@@ -1,0 +1,35 @@
+@api = http://localhost:3000/tasks
+
+GET {{ api }}
+
+###
+GET {{ api }}/2
+
+###
+GET {{ api }}/count
+
+###
+POST {{ api }}
+Content-Type: application/json
+
+{
+    "proyect_id": "1",
+    "title": "Tarea 7",
+    "description": "Descripcion de la tarea",
+    "start_date": "2023-06-13 13:41:05",
+    "duration_days":"5"
+}
+
+# Notese que hay una linea entre POST {{ api }} y el envio del cuuerpos de la tarea.
+
+###
+DELETE {{ api }}/12
+
+###
+PUT {{api}}/11
+Content-Type: application/json
+
+{
+    "title": "Esta es la tarea once"
+}
+
